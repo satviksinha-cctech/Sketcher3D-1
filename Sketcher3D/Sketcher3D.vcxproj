@@ -102,7 +102,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Geometry3D\Source;$(SolutionDir)Sketcher3D\Source;$(SolutionDir)Sketcher3D\Header;$(SolutionDir)Geometry3D\Header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Geometry3D\Source;$(SolutionDir)Sketcher3D\Source;$(SolutionDir)Sketcher3D\Header;$(SolutionDir)Geometry3D\Header;$(SolutionDir)Geometry3D;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,9 +128,11 @@
   <ItemGroup>
     <ClCompile Include="Source\FileWrite.cpp" />
     <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\Plotter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\FileWrite.h" />
+    <ClInclude Include="Header\Plotter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

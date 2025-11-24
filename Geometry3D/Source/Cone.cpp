@@ -3,9 +3,7 @@
 #include <vector>
 #include <cmath>
 
-#ifndef M_PI
-#define M_PI 3.14159265358979323846
-#endif
+
 
 Cone::Cone(const Point& baseCenter, double radius, double height,
     int circleSteps, int heightSteps)

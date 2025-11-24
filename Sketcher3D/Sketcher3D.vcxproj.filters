@@ -21,9 +21,15 @@
     <ClCompile Include="Source\FileWrite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Plotter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\FileWrite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Plotter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

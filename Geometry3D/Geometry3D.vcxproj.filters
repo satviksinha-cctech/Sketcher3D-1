@@ -48,6 +48,12 @@
     <ClInclude Include="Header\Cone.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Header\ShapesAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Pyramid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\dllmain.cpp">
@@ -72,6 +78,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\Cone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ShapesAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Pyramid.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
