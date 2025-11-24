@@ -65,7 +65,7 @@ int main() {
             continue;
         }
 
-        // Generate file name (shape1.dat, shape2.dat, ...)
+        
         std::string filename = "shape" + std::to_string(count) + ".dat";
 
         // Get coordinates from the DLL object

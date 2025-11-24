@@ -31,7 +31,7 @@ std::vector<Point> Cone::getCoordinates() const {
         }
     }
 
-    // Optionally: add edges from base points to apex (wireframe-ish)
+    
     for (int i = 0; i <= circleSteps; ++i) {
         double theta = 2.0 * M_PI * i / circleSteps;
         double x = baseCenter.x + radius * std::cos(theta);

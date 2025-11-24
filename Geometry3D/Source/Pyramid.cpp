@@ -33,13 +33,13 @@ std::vector<Point> Pyramid::getCoordinates() const {
     pts.push_back(bl);
 
     // Sides
-    pts.push_back(apex);  // bl -> apex
+    pts.push_back(apex);  
     pts.push_back(br);
-    pts.push_back(apex);  // br -> apex
+    pts.push_back(apex);  
     pts.push_back(tr);
-    pts.push_back(apex);  // tr -> apex
+    pts.push_back(apex);  
     pts.push_back(tl);
-    pts.push_back(apex);  // tl -> apex
+    pts.push_back(apex);
     pts.push_back(bl);
 
     return pts;
