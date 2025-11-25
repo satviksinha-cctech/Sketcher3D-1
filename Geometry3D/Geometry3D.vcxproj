@@ -160,7 +160,7 @@
     <ClInclude Include="Header\pch.h" />
     <ClInclude Include="Header\Point.h" />
     <ClInclude Include="Header\Pyramid.h" />
-    <ClInclude Include="Header\Shape3D.h" />
+    <ClInclude Include="Header\Shape.h" />
     <ClInclude Include="Header\ShapesAPI.h" />
     <ClInclude Include="Header\Sphere.h" />
   </ItemGroup>

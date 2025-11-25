@@ -1,17 +1,27 @@
 #pragma once
+#include "Export.h"
 #include <iostream>
+class GEOMETRY3D_API Point
+{
+private:
+	double mX;
+	double mY;
+	double mZ;
 
-class Point {
 public:
-    double x;
-    double y;
-    double z;
+	Point();
+	Point(double x, double y, double z);
+	~Point() = default;
 
-    Point();
-    Point(double x, double y, double z);
+	double distance(const Point& other) const;
+	double getX() const;
+	double getY() const;
+	double getZ() const;
+
+	void setX(const double x);
+	void setY(const double y);
+	void setZ(const double z);
+
 };
 
-inline std::ostream& operator<<(std::ostream& os, const Point& p) {
-    os << p.x << " " << p.y << " " << p.z;
-    return os;
-}
+GEOMETRY3D_API std::ostream& operator<<(std::ostream& out, const Point& p);

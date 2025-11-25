@@ -1,15 +1,23 @@
 #pragma once
-#include "Shape3D.h"
+#include "pch.h"
+#include "Shape.h"
+#include "Point.h"
+#include <vector>
 
-class Cuboid : public Shape3D {
+class GEOMETRY3D_API Cuboid : public Shape
+{
 private:
-    Point origin;   
-    double L;       
-    double B;       
-    double H;       
+    double mLength;
+    double mBreadth;
+    double mHeight;
 
 public:
-    Cuboid(const Point& origin, double L, double B, double H);
+    Cuboid(const std::string& name,
+        double length,
+        double breadth,
+        double height);
 
-    std::vector<Point> getCoordinates() const override;
+    const std::vector<Point> getCoordinates() const override;
+    void save(std::ostream& os) const override;
+    void saveForGnu(std::ostream& os) const override;
 };

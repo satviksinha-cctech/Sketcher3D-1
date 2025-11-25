@@ -1,50 +1,66 @@
-// Cuboid.cpp
 #include "Cuboid.h"
-#include <vector>
 
-Cuboid::Cuboid(const Point& origin, double L, double B, double H)
-    : origin(origin), L(L), B(B), H(H) {
+Cuboid::Cuboid(const std::string& name,
+    double length,
+    double breadth,
+    double height)
+    : Shape(name),
+    mLength(length),
+    mBreadth(breadth),
+    mHeight(height)
+{
 }
 
-std::vector<Point> Cuboid::getCoordinates() const {
+const std::vector<Point> Cuboid::getCoordinates() const
+{
     std::vector<Point> pts;
-    pts.reserve(50);
 
-    // 8 vertices
-    Point v0(origin.x, origin.y, origin.z);
-    Point v1(origin.x + L, origin.y, origin.z);
-    Point v2(origin.x + L, origin.y + B, origin.z);
-    Point v3(origin.x, origin.y + B, origin.z);
-    Point v4(origin.x, origin.y, origin.z + H);
-    Point v5(origin.x + L, origin.y, origin.z + H);
-    Point v6(origin.x + L, origin.y + B, origin.z + H);
-    Point v7(origin.x, origin.y + B, origin.z + H);
+    double L = mLength;
+    double B = mBreadth;
+    double H = mHeight;
 
-    // Bottom rectangle
-    pts.push_back(v0);
-    pts.push_back(v1);
-    pts.push_back(v2);
-    pts.push_back(v3);
-    pts.push_back(v0);
+    Point p000(0, 0, 0);
+    Point p100(L, 0, 0);
+    Point p110(L, B, 0);
+    Point p010(0, B, 0);
 
-    // Vertical edges (some may retrace)
-    pts.push_back(v4);
-    pts.push_back(v5);
-    pts.push_back(v1);
-    pts.push_back(v5);
-    pts.push_back(v6);
-    pts.push_back(v2);
-    pts.push_back(v6);
-    pts.push_back(v7);
-    pts.push_back(v3);
-    pts.push_back(v7);
-    pts.push_back(v4);
+    Point p001(0, 0, H);
+    Point p101(L, 0, H);
+    Point p111(L, B, H);
+    Point p011(0, B, H);
 
-    // Top rectangle (closing the loop)
-    pts.push_back(v5);
-    pts.push_back(v6);
-    pts.push_back(v7);
-    pts.push_back(v4);
+    // Base rectangle
+    pts.push_back(p000); pts.push_back(p100);
+    pts.push_back(p110); pts.push_back(p010);
+    pts.push_back(p000);
+
+    // Top rectangle
+    pts.push_back(p001); pts.push_back(p101);
+    pts.push_back(p111); pts.push_back(p011);
+    pts.push_back(p001);
+
+    // Vertical edges
+    pts.push_back(p000); pts.push_back(p001);
+    pts.push_back(p100); pts.push_back(p101);
+    pts.push_back(p110); pts.push_back(p111);
+    pts.push_back(p010); pts.push_back(p011);
 
     return pts;
+}
+
+void Cuboid::save(std::ostream& os) const
+{
+    os << "Cuboid: " << getName() << "\n"
+        << "Length: " << mLength << "\n"
+        << "Breadth: " << mBreadth << "\n"
+        << "Height: " << mHeight << "\n\n";
+}
+
+void Cuboid::saveForGnu(std::ostream& os) const
+{
+    const auto pts = getCoordinates();
+    for (const auto& p : pts)
+        os << p.getX() << " " << p.getY() << " " << p.getZ() << "\n";
+
+    os << "\n";
 }

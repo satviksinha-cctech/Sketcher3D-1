@@ -33,7 +33,7 @@
     <ClInclude Include="Header\Point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header\Shape3D.h">
+    <ClInclude Include="Header\Shape.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Header\Cuboid.h">
