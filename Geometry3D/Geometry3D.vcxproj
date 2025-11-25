@@ -165,16 +165,16 @@
     <ClInclude Include="Header\Sphere.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Header\Cuboid.cpp" />
-    <ClCompile Include="Header\Cylinder.cpp" />
     <ClCompile Include="Header\Point.cpp" />
-    <ClCompile Include="Header\Sphere.cpp" />
     <ClCompile Include="Source\Cone.cpp" />
+    <ClCompile Include="Source\Cuboid.cpp" />
+    <ClCompile Include="Source\Cylinder.cpp" />
     <ClCompile Include="Source\dllmain.cpp" />
     <ClCompile Include="Source\Geometry3D.cpp" />
     <ClCompile Include="Source\pch.cpp" />
     <ClCompile Include="Source\Pyramid.cpp" />
     <ClCompile Include="Source\ShapesAPI.cpp" />
+    <ClCompile Include="Source\Sphere.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
